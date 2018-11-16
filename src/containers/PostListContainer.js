@@ -7,14 +7,14 @@ class PostListContainer extends Component {
     posts: []
   };
 
-//   fetchGIFs = (query) => {
-
-//   }
+  fetchPosts = (query) => {
+    debugger
+  }
 
   render() {
     return (
     <div className="PostListContainer">
-      <SubredditSearch />
+      <SubredditSearch fetchPosts={this.fetchPosts} />
       <PostList />
     </div>);
   }
