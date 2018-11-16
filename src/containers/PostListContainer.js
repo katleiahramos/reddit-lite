@@ -7,15 +7,19 @@ class PostListContainer extends Component {
     posts: []
   };
 
-  fetchPosts = (query) => {
-    debugger
+  fetchPosts = (query = "all") => {
+    fetch(`https://www.reddit.com/r/${query}.json`, {
+      headers: {"content-type": 'application/json'}
+    })
+    .then(resp => resp.json())
+    .then( postData => {this.setState({ posts: postData.data.children })})
   }
 
   render() {
     return (
     <div className="PostListContainer">
       <SubredditSearch fetchPosts={this.fetchPosts} />
-      <PostList />
+      <PostList posts={this.state.posts} />
     </div>);
   }
 }
