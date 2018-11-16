@@ -3,7 +3,11 @@ import "./App.css";
 import PostListContainer from "./containers/PostListContainer";
 class App extends Component {
   render() {
-    return <PostListContainer />;
+    return (
+    <div className="App">
+      <PostListContainer />
+    </div>
+    );
   }
 }
 

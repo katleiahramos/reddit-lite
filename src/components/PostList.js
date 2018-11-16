@@ -1,7 +1,7 @@
 import React from "react";
 
 const PostList = props => {
-  return <div>POSTS GO HERE</div>;
+  return <div className="PostList">POSTS GO HERE</div>;
 };
 
 export default PostList;

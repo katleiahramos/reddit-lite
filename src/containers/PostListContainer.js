@@ -6,9 +6,17 @@ class PostListContainer extends Component {
     posts: []
   };
 
+//   fetchGIFs = (query) => {
+
+//   }
+
   render() {
-    return <PostList />;
+    return (
+    <div className="PostListContainer">
+      <PostList />
+    </div>);
   }
 }
 
 export default PostListContainer;
+    
