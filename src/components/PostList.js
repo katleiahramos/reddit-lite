@@ -1,11 +1,11 @@
 import React from "react";
-
+import Post from "./Post.js"
 const PostList = ({posts}) => {
 
   // TODO: make <POST> component 
   const renderPosts = () => {
     return posts.map((post, idx) => {
-      return <div className="Post" id={idx}>{post.data.title}</div>
+      return <Post post={post.data} id={idx}/>
     })
   }
 
