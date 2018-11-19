@@ -3,7 +3,7 @@ import React from "react";
 
 
 const Post = () => {
-    return <div className="Post" id={idx}>{post.data.title}</div>
+    return "Post Here"
 }
 
 
