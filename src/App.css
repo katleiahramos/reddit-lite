@@ -11,7 +11,9 @@
 }
 
 .Post {
-  background-color: blue;
+  background-color: pink; 
+  padding: 10px;
+  margin: 5px; 
 }
 
 .App-link {
