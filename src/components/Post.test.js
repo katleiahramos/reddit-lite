@@ -10,7 +10,14 @@ configure({ adapter: new Adapter() });
 
 
 describe('<Post />', () => {
-    const post = {title: "Best Post Ever!", id: 2, url: "www.post.com", permalink: "/r/posts/thispost"}
+    const post = { 
+        title: "Best Post Ever!", 
+        id: 2, url: "www.post.com", 
+        permalink: "/r/posts/thispost", 
+        author: "RedditUser",
+        // created_utc: new Date().getTime()
+    }
+
     const postWrapper = shallow(<Post post={post} />)
     it('renders without crashing', () => {
         postWrapper;
@@ -23,8 +30,11 @@ describe('<Post />', () => {
         expect(postWrapper.html()).to.contain(`<a href="${post.url}">`)
     })
     it('displays link to the comments on the reddit site ', () => {
-        expect(postWrapper.html()).to.contain(`<a href="www.reddit.com${post.permalink}">`)
+        expect(postWrapper.html()).to.contain(`<a href="https://www.reddit.com${post.permalink}">`)
     })
+    // it('displays Date and Time it was posted', () => {
+    //     expect(postWrapper.text()).to.contain(post.created_utc.toString())
+    // })
     
 })
 
