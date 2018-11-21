@@ -9,13 +9,11 @@ class PostListContainer extends Component {
   };
 
   componentWillMount(){
-    console.log("in component will mount")
     this.fetchPosts("all")
   }
 
 
   componentDidMount() {
-    console.log("in component did mount")
     this.interval = setInterval(this.fetchPosts, 60000)
   }
 
@@ -24,10 +22,6 @@ class PostListContainer extends Component {
   }
 
   setQuery = (query) => {
-    // this.setState(prevState => {
-    //   posts: prevState.posts;
-    //   query: query 
-    // });
     this.setState({query: query})
   }
 
@@ -47,7 +41,6 @@ class PostListContainer extends Component {
   }
 
   render() {
-    console.log("rendering")
     return (
       <div className="PostListContainer">
         <SubredditSearch setQuery={this.setQuery} fetchPosts={this.fetchPosts} />
