@@ -3,8 +3,15 @@ import React from "react";
 
 
 const Post = ({post}) => {
-    debugger
-    return <div className="Post"><a href={post.url}>{post.title}</a></div>
+    const commentsUrl = 'https://www.reddit.com' + post.permalink
+   
+    return (
+        <div className="Post">
+            <a href={post.url}>{post.title}</a>
+            <br/>
+            <a href={commentsUrl}>{post.num_comments} Comments</a>
+        </div>
+    )
 }
 
 
