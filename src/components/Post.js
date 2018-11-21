@@ -16,7 +16,7 @@ const Post = ({post}) => {
             <br/>
             <a href={commentsUrl}>{post.num_comments} Comments</a>
             <br />
-            Posted On: {formattedDateTime}
+            Posted On  {formattedDateTime} by {post.author}
         </div>
     )
 }
