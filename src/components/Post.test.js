@@ -35,6 +35,9 @@ describe('<Post />', () => {
     // it('displays Date and Time it was posted', () => {
     //     expect(postWrapper.text()).to.contain(post.created_utc.toString())
     // })
+    it('displays username of post author', () => {
+        expect(postWrapper.text()).to.contain(post.author)
+    })
     
 })
 
