@@ -5,18 +5,29 @@ import SubredditSearch from "../components/SubredditSearch";
 class PostListContainer extends Component {
   state = {
     posts: [],
-    time: 0
+    query: "all",
   };
 
   componentDidMount() {
-    this.interval = setInterval(this.fetchPosts, 60000)
+    this.interval = setInterval(this.fetchPosts, 5000)
   }
 
   componentWillUnmount() {
     clearInterval(this.interval)
   }
 
-  fetchPosts = (query = "all") => {
+  setQuery = (query) => {
+    // this.setState(prevState => {
+    //   posts: prevState.posts;
+    //   query: query 
+    // });
+    this.fetchPosts(query)
+    this.setState({query: query})
+  }
+
+
+
+  fetchPosts = (query = this.state.query) => {
     fetch(`https://www.reddit.com/r/${query}.json`, {
       headers: { "content-type": 'application/json' }
     })
@@ -33,7 +44,7 @@ class PostListContainer extends Component {
     console.log("rendering")
     return (
       <div className="PostListContainer">
-        <SubredditSearch fetchPosts={this.fetchPosts} />
+        <SubredditSearch setQuery={this.setQuery} fetchPosts={this.fetchPosts} />
         <PostList posts={this.state.posts} />
       </div>);
   }

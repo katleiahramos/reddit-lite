@@ -7,7 +7,8 @@ class SubredditSearch extends Component {
 
     handleOnSubmit = (event) => {
         event.preventDefault()
-        this.props.fetchPosts(this.state.searchTerm)
+        // this.props.fetchPosts(this.state.searchTerm)
+        this.props.setQuery(this.state.searchTerm)
     }
 
     handleOnChange = event => {
