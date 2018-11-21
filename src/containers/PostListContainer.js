@@ -5,11 +5,15 @@ import SubredditSearch from "../components/SubredditSearch";
 class PostListContainer extends Component {
   state = {
     posts: [],
-    refreshTimer: null
+    time: 0
   };
 
   componentDidMount() {
-    this.fetchPosts()
+    this.interval = setInterval(this.fetchPosts, 60000)
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.interval)
   }
 
   fetchPosts = (query = "all") => {
@@ -26,6 +30,7 @@ class PostListContainer extends Component {
   }
 
   render() {
+    console.log("rendering")
     return (
       <div className="PostListContainer">
         <SubredditSearch fetchPosts={this.fetchPosts} />
