@@ -8,8 +8,15 @@ class PostListContainer extends Component {
     query: "all",
   };
 
+  componentWillMount(){
+    console.log("in component will mount")
+    this.fetchPosts("all")
+  }
+
+
   componentDidMount() {
-    this.interval = setInterval(this.fetchPosts, 5000)
+    console.log("in component did mount")
+    this.interval = setInterval(this.fetchPosts, 60000)
   }
 
   componentWillUnmount() {
@@ -21,7 +28,6 @@ class PostListContainer extends Component {
     //   posts: prevState.posts;
     //   query: query 
     // });
-    this.fetchPosts(query)
     this.setState({query: query})
   }
 
