@@ -10,13 +10,17 @@ configure({ adapter: new Adapter() });
 
 
 describe('<Post />', () => {
-    let post = {title: "Best Post Ever!", id: 2}
+    const post = {title: "Best Post Ever!", id: 2, url: "www.post.com"}
+    const postWrapper = shallow(<Post post={post} />)
     it('renders without crashing', () => {
-        shallow(<Post post={post} />);
+        postWrapper;
       });
     it('displays post title', () => {
-        const wrapper = shallow(<Post post={post} />)
-        expect(wrapper.text()).to.contain('Best Post Ever!')
+        // const postWrapper = shallow(<Post post={post} />)
+        expect(postWrapper.text()).to.contain('Best Post Ever!')
+    })
+    it('displays post title linking to the shared post or site', () => {
+        expect(postWrapper.html()).to.contain('<a href="www.post.com">')
     })
 })
 
