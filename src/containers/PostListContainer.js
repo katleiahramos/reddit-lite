@@ -9,15 +9,19 @@ class PostListContainer extends Component {
   };
 
   componentWillMount(){
+    console.log("in componentWillMount")
     this.fetchPosts("all")
   }
 
 
   componentDidMount() {
+    console.log("in componentDidMount");
+    
     this.interval = setInterval(this.fetchPosts, 60000)
   }
 
   componentWillUnmount() {
+    console.log("in componentWillUnmount")
     clearInterval(this.interval)
   }
 

@@ -19,7 +19,7 @@ class SubredditSearch extends Component {
 
     render(){
         return (
-            <div id="SubredditSearch">
+            <div className="SubredditSearch">
                 <form onSubmit={this.handleOnSubmit}>
                     <label>Enter a search term to find a Subreddit:
                         <input type="text" value={this.state.searchTerm} id="searchTerm" onChange={this.handleOnChange} />

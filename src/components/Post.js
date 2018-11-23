@@ -12,11 +12,11 @@ const Post = ({post}) => {
 
     return (
         <div className="Post">
-            <a href={post.url}>{post.title}</a>
-            <br/>
-            <a href={commentsUrl}>{post.num_comments} Comments</a>
-            <br />
-            Posted On  {formattedDateTime} by {post.author}
+            <h2><a href={post.url}>{post.title}</a></h2>
+          
+            <h3><a href={commentsUrl}>{post.num_comments} Comments</a></h3>
+          
+            <h4>Posted On  {formattedDateTime} by {post.author}</h4>
         </div>
     )
 }

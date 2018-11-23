@@ -1,17 +1,47 @@
 .App {
-  text-align: center;
+  font-family: verdana, Arial, Helvetica, Sans-serif;
+  
+}
+
+h2 {
+  font-size: .90em;
+}
+
+h3 {
+  font-size: .75em;
+}
+
+h4 {
+  font-size: .5em;
+  color: whitesmoke;
+}
+
+a:link {
+  text-decoration: none;
+  color: whitesmoke;
+}
+
+
+a:hover {
+  text-decoration: underline;
 }
 
 .PostListContainer {
-  background-color: aquamarine; 
+  background-color: grey; 
 }
 
 .PostList {
-  background-color: blueviolet;
+  background-color: #262626;
+  padding: 2.5px;
+}
+
+.SubredditSearch {
+  margin: 0px;
+  padding: 10px;
 }
 
 .Post {
-  background-color: pink; 
+  background-color: grey; 
   padding: 10px;
   margin: 5px; 
 }
