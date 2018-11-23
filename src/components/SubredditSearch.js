@@ -21,7 +21,7 @@ class SubredditSearch extends Component {
         return (
             <div className="SubredditSearch">
                 <form onSubmit={this.handleOnSubmit}>
-                    <label>Enter a search term to find a Subreddit:
+                    <label><h2>Enter a search term to find a Subreddit:</h2>
                         <input type="text" value={this.state.searchTerm} id="searchTerm" onChange={this.handleOnChange} />
                     </label>
                     <input type="submit" />

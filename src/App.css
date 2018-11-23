@@ -5,20 +5,22 @@
 
 h2 {
   font-size: .90em;
+  color: #818384;
 }
 
 h3 {
   font-size: .75em;
+  color: 818384;
 }
 
 h4 {
   font-size: .5em;
-  color: whitesmoke;
+  color: #818384;
 }
 
 a:link {
   text-decoration: none;
-  color: whitesmoke;
+  color: #D4D7D9;
 }
 
 
@@ -27,11 +29,11 @@ a:hover {
 }
 
 .PostListContainer {
-  background-color: grey; 
+  background-color: #1A1A1B; 
 }
 
 .PostList {
-  background-color: #262626;
+  background-color: #030303;
   padding: 2.5px;
 }
 
@@ -41,12 +43,10 @@ a:hover {
 }
 
 .Post {
-  background-color: grey; 
+  background-color: #1A1A1B; 
   padding: 10px;
   margin: 5px; 
 }
 
-.App-link {
-  color: #61dafb;
-}
+
 
