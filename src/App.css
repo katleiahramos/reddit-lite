@@ -40,6 +40,9 @@ input[type=text] {
   height: 25px;
   background-color: #272729;
   color:#D4D7D9;
+  font-weight: bold;
+  font-size: 1em;
+  padding: 0 10px;
 }
 
 .PostListContainer {
