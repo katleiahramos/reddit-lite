@@ -28,6 +28,20 @@ a:hover {
   text-decoration: underline;
 }
 
+a:visited {
+  color: #818384; 
+}
+
+
+input[type=text] {
+  border: #D4D7D9;
+  border-radius: 4px;
+  width: 25%;
+  height: 25px;
+  background-color: #272729;
+  color:#D4D7D9;
+}
+
 .PostListContainer {
   background-color: #1A1A1B; 
 }
