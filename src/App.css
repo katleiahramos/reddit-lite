@@ -37,10 +37,19 @@ a:visited {
   border: #D4D7D9;
   margin: 0px 10px;
   height: 25px;
-  background-color: #272729;
+  background-color: #1A1A1B;
   color:#818384;
   font-weight: bold;
   font-size: 1em;
+  cursor: pointer;
+}
+
+.button:hover {background-color: #272729}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  /* transform: translateY(4px); */
 }
 
 
