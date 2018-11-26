@@ -4,17 +4,10 @@ import React from "react";
 
 const Post = ({ post }) => {
     const commentsUrl = 'https://www.reddit.com' + post.permalink
-<<<<<<< HEAD
     
     
     const t = new Date(post.created_utc*1000);
     const formattedDateTime = t.toLocaleString()
-=======
-
-
-    const t = new Date(post.created_utc * 1000);
-    const formattedDateTime = t.toString()
->>>>>>> b8115900bda7f6db923db2e1e0c51b9f541f0b32
     let url = ""
 
     if (post.is_video) {
