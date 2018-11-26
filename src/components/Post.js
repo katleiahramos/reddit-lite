@@ -7,8 +7,7 @@ const Post = ({post}) => {
     
     
     const t = new Date(post.created_utc*1000);
- 
-    const formattedDateTime = t.toString()
+    const formattedDateTime = t.toLocaleString()
     let url = ""
     if(post.is_video){
         url = commentsUrl
