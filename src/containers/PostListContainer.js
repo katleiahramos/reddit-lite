@@ -33,7 +33,7 @@ class PostListContainer extends Component {
 
   fetchPosts = (query = this.state.query) => {
     fetch(`https://www.reddit.com/r/${query}.json`, {
-      headers: { "content-type": 'application/json' }
+     
     })
       .then(resp => resp.json())
       .then(postData => {
