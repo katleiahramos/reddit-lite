@@ -27,6 +27,7 @@ class SubredditSearch extends Component {
             id="searchTerm"
             onChange={this.handleOnChange}
             placeholder="Enter a search term to find a Subreddit"
+            required
           />
 
           <input className="button" type="submit" value="Search" />
